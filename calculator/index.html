@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tantra Revenue Calculator</title>
+<meta name="description" content="Every KPI of the funnel, from traffic to the next 52 weeks, and the revenue it produces.">
+<link rel="icon" href="../assets/tantra-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css?v=33">
+<link rel="stylesheet" href="../assets/calc.css?v=33">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the calculator</a>
+<header class="bar"><div class="bar-in">
+  <a class="brand" href="../"><img src="../assets/tantra-mark.png" alt=""><span>Tantra</span></a>
+  <nav aria-label="Pages"><a href="../plan/"><span class="lg">Business plan</span><span class="sm">Plan</span></a><a href="../calculator/" aria-current="page"><span class="lg">Revenue calculator</span><span class="sm">Calculator</span></a><a href="../vision/"><span class="lg">Vision board</span><span class="sm">Vision</span></a></nav>
+</div></header>
+<main id="main" class="wrap calc">
+  <section class="c-head">
+    <h1>Revenue calculator</h1>
+    <p class="lede">Every KPI of the funnel, stage by stage, and the revenue it makes. Change any rate, or type over any calculated number (page visits, registrants, deals at a pipeline stage) and everything after it recalculates.</p>
+    <div class="c-ctl">
+      <label>Start from <select id="preset"></select></label>
+      <label>Funnel <select id="shape"><option value="webinar">Webinar</option><option value="rsp">Reverse squeeze page</option><option value="workshop">Workshop series</option></select></label>
+      <label>Offer <select id="offer"><option value="call">Book a call (Enterprise)</option><option value="checkout">Buy now (Pro and the course)</option></select></label>
+      <div class="c-btns">
+        <button type="button" id="openall">Open every stage</button>
+        <button type="button" id="share">Copy a link with these numbers</button>
+        <button type="button" id="reset" class="ghost">Reset</button>
+      </div>
+    </div>
+  </section>
+  <div class="c-grid">
+    <form id="calc-form" class="c-form" onsubmit="return false" aria-label="Funnel KPIs"></form>
+    <aside class="c-out" aria-live="polite">
+      <div class="c-card">
+        <h2 class="c-h">Revenue</h2>
+        <div class="c-big" id="big"></div>
+      </div>
+      <div class="c-card">
+        <h2 class="c-h">The funnel</h2>
+        <div id="viz"></div>
+        <div id="pipe"></div>
+      </div>
+      <div class="c-card">
+        <h2 class="c-h">Revenue in detail</h2>
+        <div class="tbl" id="rev"></div>
+        <p class="small" id="note"></p>
+      </div>
+    </aside>
+  </div>
+  <p class="small c-src">The KPIs and their equations come from <a href="https://revops-funnel-equations.growthcluborg.workers.dev/">The RevOps Funnel Equations</a> and the playbook's webinar funnel. WhatsApp invites in Stage 1 and the buy now path in Stage 4 are added for Tantra's Pro webinar. Default rates are planning figures; replace them with your own. Your numbers are saved in this browser.</p>
+</main>
+<script src="../assets/calc.js?v=33"></script>
+</body>
+</html>
